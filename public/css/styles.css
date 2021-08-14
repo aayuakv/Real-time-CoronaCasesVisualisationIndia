@@ -1,0 +1,123 @@
+ * {
+  margin: 0;
+  padding: 0;
+}
+/*
+#map {
+  width: 80vw;
+  height: 60vh;
+} */
+body{
+background: linear-gradient(to bottom, #ffccff 0%, #ffffff 100%);
+}
+.home{
+  padding:2%;
+  margin-bottom:4%;
+
+}
+
+.centered {
+    padding-top: 2%;
+    text-align: center;
+}
+.register h1{
+  text-align: center;
+}
+.register .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+.button-submit{
+  margin: 3%;
+  text-align:center;
+}
+.google-btn{
+  margin-bottom: 3%;
+  text-align: center;
+  border:0;
+}
+.register-button{
+  width:100%;
+}
+.imp{
+  color: red;
+}
+.reg-table{
+  border: 0 !important;
+}
+.reg-th{
+  border: 0 !important;
+  width:180px;
+}
+.reg-td{
+  border: 0 !important;
+  width:500px;
+}
+.reg-span{
+text-align: center;
+}
+.o{
+padding-bottom: 0.5%;
+}
+
+h1{
+border: 5px solid white;
+}
+
+.active{
+border: 3px solid blue;
+}
+.confirmed{
+border: 3px solid yellow;
+}
+.recovered{
+border: 3px solid green;
+}
+.deaths{
+border: 3px solid red;
+}
+table,th,td{
+  border:1px solid black;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width:90%;
+  text-align: center;
+  background-color: #DCDCDC;
+  color:#404040;
+}
+th, td {
+  padding: 1%;
+}
+.button{
+  text-align: center;
+  margin-bottom:3%;
+}
+footer {
+  text-align: center;
+    background-color: #000;
+    color: #DCDCDC;
+}
+.social-icon {
+    margin: 20px 10px;
+}
+footer .container-fluid-learnmore
+{
+    padding: 7% 15%;
+    margin: 0%;
+  }
+@media (max-width:1028px) {
+.hide{
+  display: none;
+}
+/* footer{
+  position: fixed;
+  bottom: 0;
+} */
+}

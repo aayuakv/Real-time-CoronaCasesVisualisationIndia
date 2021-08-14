@@ -1,0 +1,110 @@
+<%- include('partials/header') %>
+
+
+<div class="register container mt-5">
+  <h1>REGISTERATION FOR REAL TIME C19 STATS</h1>
+
+
+
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <div class="google-btncol-sm-4">
+            <div class="social-block">
+              <div class="google-btn">
+                <a class="btn btn btn-danger" href="/auth/google" role="button">
+                  <i class="fab fa-google"></i>
+                  SIGN UP WITH GOOGLE
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Makes POST request to /register route -->
+          <form action="/register" method="POST">
+
+            <div class="form-group">
+              <table class="reg-table">
+
+                <tr>
+                  <td class="reg-th"><label for="firName">First Name : <span class="imp">*</span></label></td>
+                  <td class="reg-td"><input type="text" class="form-control" name="fName" placeholder="First" minlength="3" maxlength="15" id="firName" required></td>
+                </tr>
+
+                <tr>
+                  <td class="reg-th"><label for="lasName">Last Name : <span class="imp">*</span></label></td>
+                  <td class="reg-td"><input type="text" class="form-control" name="lName" placeholder="Last" minlength="3" maxlength="15" id="lasName" required></td>
+                </tr>
+
+                <tr>
+                  <td class="reg-th"><label for="coucode">Country code : <span class="imp">*</span></label></td>
+                  <td class="reg-td"><input type="text" class="form-control" name="cCode" placeholder="+91" minlength="2" maxlength="5" id="coucode" value="+91" required></td>
+                </tr>
+
+                <tr>
+                  <td class="reg-th"><label for="cont">Contact No. : <span class="imp">*</span></label></td>
+                  <td class="reg-td"><input type="tel" class="form-control" name="contact" placeholder="8476XXXXXX" minlength="4" maxlength="15" id="cont" required></td>
+                </tr>
+
+                <tr>
+                  <td class="reg-th"><label for="city">City : <span class="imp">*</span></label></td>
+                  <td class="reg-td"><input type="text" class="form-control" name="location" placeholder="Haridwar" minlength="3" maxlength="15" id="city" required></td>
+                </tr>
+
+                <tr>
+                  <td class="reg-th"><label for="emailadd">E-Mail Address : <span class="imp">*</span></label></td>
+                  <td class="reg-td"><input type="email" pattern="/^[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}*$/" class="form-control" name="username" placeholder="abc@email.com" id="emailadd" required></td>
+                </tr>
+
+                <tr>
+                  <td class="reg-th"><label for="pass">Password : <span class="imp">*</span></label></td>
+                  <td class="reg-td"><input type="password" class="form-control" name="password" id="pass" minlength="7" onkeyup='check();' required></td>
+                </tr>
+
+                <tr>
+                  <td class="reg-th"><label for="cpass">Confirm Password : <span class="imp">*</span></label></td>
+                  <td class="reg-td" rowspan="2"><input type="password" class="form-control" name="cPassword" id="cpass" minlength="7" onkeyup='check();' required></td>
+                </tr>
+
+              </table>
+            </div>
+            <div class="button-submit">
+              <button type="submit" class="btn btn-success register-button" id="register-click">CLICK HERE TO REGISTER</button>
+            </div>
+            <div class="reg-span">
+              <span id='message'></span>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
+<!-- for password and confirm password matching -->
+<script type="text/javascript">
+  var check = function() {
+    if (document.getElementById('pass').value == document.getElementById('cpass').value) {
+      document.getElementById('message').style.color = 'green';
+      document.getElementById('message').innerHTML = 'password matched with confirm password';
+      // document.getElementById('register-click').style.display = "";
+      document.getElementById('register-click').disabled = false;
+    } else {
+      document.getElementById('message').style.color = 'red';
+      document.getElementById('message').innerHTML = 'password did not matched with confirm password';
+      // document.getElementById('register-click').style.display = "none";
+      document.getElementById('register-click').disabled = true;
+    }
+  }
+</script>
+<%- include('partials/footer') %>

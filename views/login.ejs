@@ -1,0 +1,60 @@
+<%- include('partials/header') %>
+
+<div class="register container mt-5">
+  <h1>LOGIN IN THE FORM FOR REAL TIME C19 STATS</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+
+
+          <div class="google-btncol-sm-4">
+            <div class="social-block">
+              <div class="google-btn">
+                <a class="btn btn btn-danger" href="/auth/google" role="button">
+                  <i class="fab fa-google"></i>
+                  SIGN IN WITH GOOGLE
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Makes POST request to /login route -->
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <table class="reg-table">
+
+
+
+                <tr>
+                  <td class="reg-th"><label for="email">E-Mail Address : <span class="imp">*</span></label></td>
+                  <td class="reg-td"><input type="email" class="form-control" name="username" placeholder="abc@email.com" id="emailadd" required></td>
+                </tr>
+
+                <tr>
+                  <td class="reg-th"><label for="password">Password : <span class="imp">*</span></label></td>
+                  <td class="reg-td"><input type="password" class="form-control" name="password" id="pass" required></td>
+                </tr>
+
+              </table>
+            </div>
+            <div class="button-submit ">
+              <button type="submit" class="btn btn-success register-button">CLICK HERE TO LOGIN</button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<%- include('partials/footer') %>

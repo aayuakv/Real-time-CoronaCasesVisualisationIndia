@@ -1,0 +1,367 @@
+<%- include('partials/header') %>
+
+<div class="container-fluid text-center my-3 p-5">
+  <h1><img class="hide" src="images/india.png"><u>C<img class="o" src="images/icon.png" height="40px" width="35px">VOID19 INDIA STATISTICS</u><img class="hide" src="images/india.png"></h1>
+  <h5 class="text-muted">
+    Track covoid 19 cases and show real-time visualization
+  </h5>
+</div>
+
+
+
+
+<div class="container my-5">
+  <div class="row text-center">
+
+
+    <div class="col-3 confirmed">
+      <b>
+        <h5>Confirmed Cases</h5>
+        <p id="confirmed"></p>
+      </b>
+    </div>
+
+
+    <div class="col-3 active">
+      <b>
+        <h5>Active Cases</h5>
+        <p id="active"></p>
+      </b>
+    </div>
+
+
+
+    <div class="col-3 recovered">
+      <b>
+        <h5>Recovered Cases</h5>
+        <p id="recovered"></p>
+      </b>
+    </div>
+
+
+
+    <div class="col-3 deaths">
+      <b>
+        <h5>Death cases</h5>
+        <p id="deaths"></p>
+      </b>
+    </div>
+
+
+  </div>
+
+  <canvas id="myChart"></canvas>
+
+  <table class="center">
+    <tr>
+      <th>S.NO.</th>
+      <th>STATES</th>
+      <th>CONFIRMED</th>
+      <th>RECOVERED</th>
+      <th>DEATHS</th>
+      <th>LAST UPDATE</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td id="1a"></td>
+      <td id="1b"></td>
+      <td id="1c"></td>
+      <td id="1d"></td>
+      <td id="1e"></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td id="2a"></td>
+      <td id="2b"></td>
+      <td id="2c"></td>
+      <td id="2d"></td>
+      <td id="2e"></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td id="3a"></td>
+      <td id="3b"></td>
+      <td id="3c"></td>
+      <td id="3d"></td>
+      <td id="3e"></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td id="4a"></td>
+      <td id="4b"></td>
+      <td id="4c"></td>
+      <td id="4d"></td>
+      <td id="4e"></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td id="5a"></td>
+      <td id="5b"></td>
+      <td id="5c"></td>
+      <td id="5d"></td>
+      <td id="5e"></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td id="6a"></td>
+      <td id="6b"></td>
+      <td id="6c"></td>
+      <td id="6d"></td>
+      <td id="6e"></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td id="7a"></td>
+      <td id="7b"></td>
+      <td id="7c"></td>
+      <td id="7d"></td>
+      <td id="7e"></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td id="8a"></td>
+      <td id="8b"></td>
+      <td id="8c"></td>
+      <td id="8d"></td>
+      <td id="8e"></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td id="9a"></td>
+      <td id="9b"></td>
+      <td id="9c"></td>
+      <td id="9d"></td>
+      <td id="9e"></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td id="10a"></td>
+      <td id="10b"></td>
+      <td id="10c"></td>
+      <td id="10d"></td>
+      <td id="10e"></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td id="11a"></td>
+      <td id="11b"></td>
+      <td id="11c"></td>
+      <td id="11d"></td>
+      <td id="11e"></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td id="12a"></td>
+      <td id="12b"></td>
+      <td id="12c"></td>
+      <td id="12d"></td>
+      <td id="12e"></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td id="13a"></td>
+      <td id="13b"></td>
+      <td id="13c"></td>
+      <td id="13d"></td>
+      <td id="13e"></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td id="14a"></td>
+      <td id="14b"></td>
+      <td id="14c"></td>
+      <td id="14d"></td>
+      <td id="14e"></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td id="15a"></td>
+      <td id="15b"></td>
+      <td id="15c"></td>
+      <td id="15d"></td>
+      <td id="15e"></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td id="16a"></td>
+      <td id="16b"></td>
+      <td id="16c"></td>
+      <td id="16d"></td>
+      <td id="16e"></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td id="17a"></td>
+      <td id="17b"></td>
+      <td id="17c"></td>
+      <td id="17d"></td>
+      <td id="17e"></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td id="18a"></td>
+      <td id="18b"></td>
+      <td id="18c"></td>
+      <td id="18d"></td>
+      <td id="18e"></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td id="19a"></td>
+      <td id="19b"></td>
+      <td id="19c"></td>
+      <td id="19d"></td>
+      <td id="19e"></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td id="20a"></td>
+      <td id="20b"></td>
+      <td id="20c"></td>
+      <td id="20d"></td>
+      <td id="20e"></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td id="21a"></td>
+      <td id="21b"></td>
+      <td id="21c"></td>
+      <td id="21d"></td>
+      <td id="21e"></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td id="22a"></td>
+      <td id="22b"></td>
+      <td id="22c"></td>
+      <td id="22d"></td>
+      <td id="22e"></td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td id="23a"></td>
+      <td id="23b"></td>
+      <td id="23c"></td>
+      <td id="23d"></td>
+      <td id="23e"></td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td id="24a"></td>
+      <td id="24b"></td>
+      <td id="24c"></td>
+      <td id="24d"></td>
+      <td id="24e"></td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td id="25a"></td>
+      <td id="25b"></td>
+      <td id="25c"></td>
+      <td id="25d"></td>
+      <td id="25e"></td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td id="26a"></td>
+      <td id="26b"></td>
+      <td id="26c"></td>
+      <td id="26d"></td>
+      <td id="26e"></td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td id="27a"></td>
+      <td id="27b"></td>
+      <td id="27c"></td>
+      <td id="27d"></td>
+      <td id="27e"></td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td id="28a"></td>
+      <td id="28b"></td>
+      <td id="28c"></td>
+      <td id="28d"></td>
+      <td id="28e"></td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td id="29a"></td>
+      <td id="29b"></td>
+      <td id="29c"></td>
+      <td id="29d"></td>
+      <td id="29e"></td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td id="30a"></td>
+      <td id="30b"></td>
+      <td id="30c"></td>
+      <td id="30d"></td>
+      <td id="30e"></td>
+    </tr>
+    <!-- <tr>
+      <td>31</td>
+      <td id="31a"></td>
+      <td id="31b"></td>
+      <td id="31c"></td>
+      <td id="31d"></td>
+    </tr> -->
+    <tr>
+      <td>31</td>
+      <td id="32a"></td>
+      <td id="32b"></td>
+      <td id="32c"></td>
+      <td id="32d"></td>
+      <td id="32e"></td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td id="33a"></td>
+      <td id="33b"></td>
+      <td id="33c"></td>
+      <td id="33d"></td>
+      <td id="33e"></td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td id="34a"></td>
+      <td id="34b"></td>
+      <td id="34c"></td>
+      <td id="34d"></td>
+      <td id="34e"></td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td id="35a"></td>
+      <td id="35b"></td>
+      <td id="35c"></td>
+      <td id="35d"></td>
+      <td id="35e"></td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td id="36a"></td>
+      <td id="36b"></td>
+      <td id="36c"></td>
+      <td id="36d"></td>
+      <td id="36e"></td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td id="37a"></td>
+      <td id="37b"></td>
+      <td id="37c"></td>
+      <td id="37d"></td>
+      <td id="37e"></td>
+    </tr>
+  </table>
+</div>
+<div class="button">
+  <a class="btn btn-outline-dark btn-lg" href="/logout" role="button">Log Out</a>
+</div>
+
+
+
+<%- include('partials/footer') %>

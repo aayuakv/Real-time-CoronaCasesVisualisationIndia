@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+
+<div class="home jumbotron centered">
+  <div class="container">
+    <img src="images/icon.png" alt=""><br /><br /><br />
+    <h1 class="display-3">COVOID19 DASHBOARD</h1>
+    <p class="lead">REAL-TIME LIVE UPDATES OF C19 STATISTICS IN VISUALIZE FORM</p>
+    <hr>
+    <a class="btn btn-outline-dark btn-lg" href="/register" role="button">Register</a>
+    <a class="btn btn-outline-dark btn-lg" href="/login" role="button">Login</a>
+
+  </div>
+</div>
+
+<!-- this script is used to stop back button after logout to see content of website by disable back button -->
+<!-- but this is not the permanent solution,permanent solution is to clear the cache after logout button -->
+<script>
+  history.pushState(null, null, null);
+  window.addEventListener('popstate', function() {
+    history.pushState(null, null, null);
+  });
+</script>
+<%- include('partials/footer') %>
